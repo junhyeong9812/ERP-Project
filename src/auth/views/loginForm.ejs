@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form id="loginform" method="post" action="/auth/loginCheck/">
+        아이디  &nbsp;&nbsp;&nbsp;:<input type="text" name="id" id="id" placeholder="아이디"><br>
+        패스워드 :<input type="password" name="pwd" id="pwd" placeholder="패스워드"><br>
+        <input type="button" onclick="LoginCheck()" value="로그인">
+        <hr>
+        <span onclick="">회원가입</span>
+        </form>
+    </div>
+    <script>
+            LoginCheck=()=>{
+            let id = document.getElementById('id');
+            let pwd = document.getElementById('pwd');
+            if(id.value=="" ){
+                alert("아이디를 입력 하세요")
+                return;
+            }
+            if(pwd.value==""){
+                alert("패스워드를 입력 하세요")
+                return;
+            }
+            loginform.submit();
+        
+        }
+    </script>
+   
+</body>
+</html>
